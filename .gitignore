@@ -1,1 +1,4 @@
-top100/top100_app/__pycache__
+top100/top100_app/__pycache__/
+top100/top100_app/migrations/__pycache__/
+top100/top100_syte/__pycache__/
+top100/top100_syte/__pycache__/settings.cpython-36.pyc
