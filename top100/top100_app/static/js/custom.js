@@ -161,25 +161,19 @@ $(function () {
 	$(document).ready(function () {
 		$("#contact-form").validate({
 			rules: {
-				firstname: "required",
+				name: "required",
+				phone: "required",
 				email: {
 					required: true,
 					email: true
 				},
-				lastname: "required",
 				message: "required",
-				agree: "required"
 			},
 			messages: {
-				firstname: "Please enter your firstname",
+				name: "Please enter your name",
+				phone: "Please enter your lastname",
 				email: "Please enter a valid email address",
-				lastname: "Please enter your lastname",
-				username: {
-					required: "Please enter a username",
-					minlength: "Your username must consist of at least 2 characters"
-				},
 				message: "Please enter your Message",
-				agree: "Please accept our policy"
 			},
 			errorElement: "div",
 			errorPlacement: function (error, element) {

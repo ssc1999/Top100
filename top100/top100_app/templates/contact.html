@@ -98,22 +98,11 @@
         <div class="row">
             <div class=" col-md-6 offset-md-3">
                 <div class="address">
-
-                    <form>
+                    <form action="contact.html" method="post">
                         <div class="row">
                             <div class="col-sm-12">
-                                <input class="contactus" placeholder="Name" type="text" name="Name">
-                            </div>
-                            <div class="col-sm-12">
-                                <input class="contactus" placeholder="Phone" type="text" name="Email">
-                            </div>
-                            <div class="col-sm-12">
-                                <input class="contactus" placeholder="Email" type="text" name="Email">
-                            </div>
-                            <div class="col-sm-12">
-                                <textarea class="textarea" placeholder="Message" type="text" name="Message"></textarea>
-                            </div>
-                            <div class="col-sm-12">
+                                {% csrf_token %}
+                                {{form.as_p}}
                                 <button class="send">Send</button>
                             </div>
                         </div>

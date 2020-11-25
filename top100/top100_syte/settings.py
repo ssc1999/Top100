@@ -38,7 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'top100_app'
+    'top100_app',
+    'phone_field'
 ]
 
 MIDDLEWARE = [
