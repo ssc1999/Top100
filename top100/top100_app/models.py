@@ -13,7 +13,7 @@ class Gender(models.Model):
     name = models.CharField(max_length = 30)
 
     def __str__(self):
-        return self.name
+        return "Gender: " + self.name
 
 class Author(models.Model):
     name = models.CharField(max_length = 30)
