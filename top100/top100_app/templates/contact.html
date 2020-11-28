@@ -8,35 +8,3 @@
     <li> <a href="genero.html">Géneros</a> </li>
     <li class="active"> <a href="contact.html">Contact</a> </li>
     {% endblock %}
-
-    {% block body %}
-    <div class="contactbg">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="contacttitlepage">
-                        <h2>contact</h2>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-    </div>
-    <div class="container">
-        <div class="row">
-            <div class=" col-md-6 offset-md-3">
-                <div class="address">
-                    <form action="contact.html" method="post">
-                        <div class="row">
-                            <div class="col-sm-12">
-                                {% csrf_token %}
-                                {{form.as_p}}
-                                <button class="send">Send</button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-    {% endblock %}
