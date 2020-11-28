@@ -1,8 +1,8 @@
 from django.db import models
 
 class Contact(models.Model):
-    name = models.CharField(max_length = 100)
-    phone = models.CharField(max_length = 13)
+    name = models.CharField(max_length = 100, default='Name')
+    phone = models.CharField(max_length = 13, default='Name')
     mail = models.CharField(max_length = 100)
     message = models.CharField(max_length = 2000)
 
@@ -10,13 +10,14 @@ class Contact(models.Model):
         return self.mail
 
 class Gender(models.Model):
-    name = models.CharField(max_length = 30)
+    name = models.CharField(max_length = 30, default='Name')
 
     def __str__(self):
         return "Gender: " + self.name
 
 class Author(models.Model):
-    name = models.CharField(max_length = 30)
+    name = models.CharField(max_length = 30, default='Name')
+    info = models.CharField(max_length = 200, default='Information')
 
     def __str__(self):
         return "Author: " + self.name
