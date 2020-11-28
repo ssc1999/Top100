@@ -239,8 +239,8 @@
      text-decoration: underline !important;
 }
  .main_bt:hover, .main_bt:focus {
-     background: #ad2101;
-     border: solid #ad2101 5px;
+     background: #038367;
+     border: solid #01b890 5px;
      color: #fff;
 }
 /**-- list icon --**/
@@ -1345,8 +1345,8 @@
  .header {
      background: #070100;
      padding: 23px 0px;
-     border-top: #cf2323 solid 5px;
-     border-bottom: #cf2323 solid 5px;
+     border-top: #01b890 solid 5px;
+     border-bottom: #01b890 solid 5px;
 }
  .logo a {
      font-size: 40px;
@@ -1391,7 +1391,7 @@
 }
  .Perfect {
      font-weight: normal;
-     background: #f70606ab;
+     background: #039273;
      padding: 0px 20px;
      font-size: 51px;
 }
@@ -1421,11 +1421,11 @@
      font-weight: 500;
      font-size: 17px;
      line-height: 30px;
-     color: #d70a03;
+     color: #01b890;
 }
  .banner-main .text-bg a:hover {
-     border: #d70a03 solid 1px;
-     background: #d70a03;
+     border: #01b890 solid 1px;
+     background: #01b890;
      color: #fff;
 }
 /** music-box **/
@@ -1461,7 +1461,7 @@
      padding: 0px;
 }
  .text-box {
-     background: #ff1d00;
+     background: #01b890;
      width: 100%;
      height: 90%;
      margin: 32px 0px;
@@ -1495,7 +1495,7 @@
  .text-box .box a {
      max-width: 167px;
      background: #fff;
-     color: #ff1d00;
+     color: #01b890;
      width: 100%;
      padding: 12px 0px;
      display: inline-block;
@@ -1504,7 +1504,7 @@
 }
  .text-box .box a:hover {
      background: #000;
-     color: #ff1d00;
+     color: #01b890;
 }
 /** Lastestnews **/
  .Lastestnews {
@@ -1545,7 +1545,7 @@
      padding: 20px 20px 4px 20px;
 }
  .Lastestnews .news-box span {
-     color: #e61414;
+     color: #01b890;
      margin-left: 20px;
 }
  .Lastestnews .news-box p{
@@ -1603,7 +1603,7 @@
      text-align: center;
      display: flex;
      justify-content: center;
-     background: #f71717b3;
+     background: #01b890;
      align-items: center;
      margin: 0 15px;
 }
@@ -1650,7 +1650,7 @@
      display: none;
 }
  .Newsletter {
-     background: #ff1d00;
+     background: #01b890;
      padding: 35px 0px;
 }
  .Newsletter h2 {
@@ -1731,11 +1731,11 @@
      align-items: center;
      flex-wrap: wrap;
      border-radius: 10px;
-     color: #f70e0e;
+     color: #01b890;
 }
  .send:hover {
-     background-color: #f70e0e;
-     border: #f70e0e solid 1px;
+     background-color: #01b890;
+     border: #01b890 solid 1px;
      color: #fff;
 }
  .address figure {
@@ -1804,14 +1804,14 @@
      text-align: center;
 }
  .copyright a:hover {
-     color: #f70e0e 
+     color: #01b890 
 }
 /*--------------------------------------------------------------------- ener page css ---------------------------------------------------------------------*/
  .about-page .footer {
      margin-top: 90px;
 }
  .aboutbg {
-     background-color: #ff1d00;
+     background-color: #01b890;
 }
  .contact-page .send {
     background: #000;
@@ -1821,8 +1821,8 @@
      display: block;
 }
  .contact-page .send:hover {
-    background: #f70e0e;
-     border: #f70e0e solid 1px;
+    background: #01b890;
+     border: #01b890 solid 1px;
 }
  .contact-page .copyright {
     background: #000;
@@ -1834,7 +1834,7 @@
     color: #fff;
 }
  .contact-page .copyright p a:hover {
-    color: #f70e0e;
+    color: #01b890;
 }
  .aboutbg .abouttitlepage h2 {
      color: #fff;
@@ -1846,7 +1846,7 @@
      text-align: center;
 }
  .contactbg {
-     background-color: #ff1d00;
+     background-color: #01b890;
      margin-bottom: 90px;
 }
  .contactbg .contacttitlepage h2 {
@@ -1859,7 +1859,7 @@
      text-align: center;
 }
  .blogbg {
-     background-color: #ff1d00;
+     background-color: #01b890;
 }
  .blogbg .blogtitlepage h2 {
      color: #fff;
@@ -1871,7 +1871,7 @@
      text-align: center;
 }
  .Albumsbg {
-     background-color: #ff1d00;
+     background-color: #01b890;
      margin-bottom: 60px;
 }
  .Albumsbg .Albumstitlepage h2 {
@@ -1884,7 +1884,7 @@
      text-align: center;
 }
  .Request-bg {
-     background-color: #ad2100;
+     background-color: #01b890;
 }
  .Request-bg .abouttitle h2 {
      color: #fff;
@@ -1896,7 +1896,7 @@
      text-align: center;
 }
  .Team-bg {
-     background-color: #ad2100;
+     background-color: #01b890;
 }
  .Team-bg .abouttitle h2 {
      color: #fff;
