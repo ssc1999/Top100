@@ -1,6 +1,14 @@
 {% extends "base.html" %}
 {% load static %}
 
+    {% block active%}
+    <li> <a href="index.html">Home</a> </li>
+    <li> <a href="about.html">about</a> </li>
+    <li class="active"><a href="album.html"> Albums</a> </li>
+    <li> <a href="blog.html">Blog</a> </li>
+    <li> <a href="contact.html">Contact</a> </li>
+    {% endblock %}
+
     {% block body %}
     <div class="Albumsbg">
         <div class="container">
