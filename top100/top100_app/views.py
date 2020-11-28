@@ -39,11 +39,53 @@ def contact (request) :
     }
     return render(request, "contact.html", context)
 
-def blog (request) :
-    return render(request, "blog.html")
+def genero (request) :
+    form = ContactForm()
+    if request.method == 'POST':
+        form = ContactForm(request.POST)
+        if form.is_valid():
+            contacto = Contact()
+            contacto.name = form.cleaned_data["name"]
+            contacto.phone = form.cleaned_data["phone"]
+            contacto.mail = form.cleaned_data["mail"]
+            contacto.message = form.cleaned_data["message"]
+            contacto.save()
+        return HttpResponseRedirect(reverse(views.index))
+    context = {
+        'form' : form,
+    }
+    return render(request, "genero.html", context)
 
 def album (request) :
-    return render(request, "album.html")
+    form = ContactForm()
+    if request.method == 'POST':
+        form = ContactForm(request.POST)
+        if form.is_valid():
+            contacto = Contact()
+            contacto.name = form.cleaned_data["name"]
+            contacto.phone = form.cleaned_data["phone"]
+            contacto.mail = form.cleaned_data["mail"]
+            contacto.message = form.cleaned_data["message"]
+            contacto.save()
+        return HttpResponseRedirect(reverse(views.index))
+    context = {
+        'form' : form,
+    }
+    return render(request, "album.html", context)
 
 def about (request) :
-    return render(request, "about.html")
+    form = ContactForm()
+    if request.method == 'POST':
+        form = ContactForm(request.POST)
+        if form.is_valid():
+            contacto = Contact()
+            contacto.name = form.cleaned_data["name"]
+            contacto.phone = form.cleaned_data["phone"]
+            contacto.mail = form.cleaned_data["mail"]
+            contacto.message = form.cleaned_data["message"]
+            contacto.save()
+        return HttpResponseRedirect(reverse(views.index))
+    context = {
+        'form' : form,
+    }
+    return render(request, "about.html", context)
