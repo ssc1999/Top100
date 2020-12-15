@@ -2,11 +2,11 @@
 {% load static %}
 
     {% block active%}
-    <li> <a href="index.html">Home</a> </li>
-    <li> <a href="about.html">about</a> </li>
-    <li class="active"><a href="album.html"> Albums</a> </li>
-    <li> <a href="genero.html">Géneros</a> </li>
-    <li> <a href="contact.html">Contact</a> </li>
+    <li> <a href="{% url 'index'%}">Home</a> </li>
+    <li> <a href="{% url 'about'%}">About</a> </li>
+    <li class="active"><a href="{% url 'album'%}"> Albums</a> </li>
+    <li> <a href="{% url 'genre'%}">Genres</a> </li>
+    <li> <a href="{% url 'contact'%}">Contact</a> </li>
     {% endblock %}
 
     {% block body %}

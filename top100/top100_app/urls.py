@@ -4,10 +4,9 @@ from . import views
 
 urlpatterns = [
         path ('', views.index, name = 'index'),
-        path ('index.html', views.index, name = 'index'),
-        path ('contact.html', views.contact, name = 'contact'),
-        path ('genero.html', views.genero, name = 'genero'),
-        path ('album.html', views.album, name = 'album'),
-        path ('about.html', views.about, name = 'about'),
-
+        path ('contact', views.contact, name = 'contact'),
+        path ('genre', views.genre, name = 'genre'),
+        path ('album', views.album, name = 'album'),
+        path ('about', views.about, name = 'about'),
+        path ('genres/<int:genre_id>/', views.genre_details, name = 'genre_details')
 ]

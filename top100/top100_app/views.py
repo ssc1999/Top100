@@ -2,7 +2,7 @@ from django.shortcuts import render, get_object_or_404, get_list_or_404
 from django.http import HttpResponse, HttpResponseRedirect, Http404
 from django.urls import reverse
 from .forms import ContactForm
-from .models import Contact
+from .models import Contact, Genre
 from . import views
 
 def index (request) :
@@ -39,7 +39,8 @@ def contact (request) :
     }
     return render(request, "contact.html", context)
 
-def genero (request) :
+def genre (request) :
+    genres = get_list_or_404(Genre.objects.order_by('name'))
     form = ContactForm()
     if request.method == 'POST':
         form = ContactForm(request.POST)
@@ -52,9 +53,10 @@ def genero (request) :
             contacto.save()
         return HttpResponseRedirect(reverse(views.index))
     context = {
-        'form' : form,
+        'genre_list': genres,
+        'form' : form
     }
-    return render(request, "genero.html", context)
+    return render(request, "genre.html", context)
 
 def album (request) :
     form = ContactForm()
@@ -89,3 +91,10 @@ def about (request) :
         'form' : form,
     }
     return render(request, "about.html", context)
+
+def genre_details(request, genre_id):
+    genre = get_object_or_404(Genre, pk=genre_id)
+    context = {
+        'genre': genre
+    }
+    return render(request, "genre_details.html", context)

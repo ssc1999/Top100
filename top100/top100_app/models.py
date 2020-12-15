@@ -9,15 +9,18 @@ class Contact(models.Model):
     def __str__(self):
         return self.mail
 
-class Gender(models.Model):
+class Genre(models.Model):
     name = models.CharField(max_length = 30, default='Name')
+    description = models.CharField(max_length = 300, default='Description')
+    image = models.ImageField(upload_to='top100_app/static/images/genres/', blank=True, null=False, verbose_name='Image')
 
     def __str__(self):
-        return "Gender: " + self.name
+        return "Genre: " + self.name
 
 class Author(models.Model):
     name = models.CharField(max_length = 30, default='Name')
     info = models.CharField(max_length = 200, default='Information')
+    image = models.ImageField(upload_to='top100_app/static/image/authors', verbose_name='Image', null = True, blank=True)
 
     def __str__(self):
         return "Author: " + self.name
@@ -25,7 +28,7 @@ class Author(models.Model):
 class Song(models.Model):
     name = models.CharField(max_length=20)
     author = models.ForeignKey(Author, on_delete=models.CASCADE)
-    gender = models.ManyToManyField(Gender)
+    genre = models.ManyToManyField(Genre)
     repros = models.IntegerField()
 
     def __str__(self):
@@ -34,12 +37,10 @@ class Song(models.Model):
 class Album(models.Model):
     name = models.CharField(max_length = 20)
     author = models.ForeignKey(Author, on_delete=models.CASCADE)
-    gender = models.ManyToManyField(Gender)
+    genre = models.ManyToManyField(Genre)
     song = models.ForeignKey(Song, on_delete=models.CASCADE)
     repros = models.IntegerField()
+    image = models.ImageField(upload_to='top100_app/static/image/albums', verbose_name='Image', null = True, blank=True)
 
     def __str__(self):
         return "Album: " + self.name
-
-
-

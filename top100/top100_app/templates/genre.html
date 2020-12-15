@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% load static %}
+
+    {% block active%}
+    <li> <a href="{% url 'index'%}">Home</a> </li>
+    <li> <a href="{% url 'about'%}">about</a> </li>
+    <li> <a href="{% url 'album'%}"> Albums</a> </li>
+    <li class="active"> <a href="{% url 'genre'%}">Genres</a> </li>
+    <li> <a href="{% url 'contact'%}">Contact</a> </li>
+    {% endblock %}
+
+    {% block body %}
+    <div class="blogbg">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="blogtitlepage">
+                        <h2>Genres</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- Lastestnews -->
+    <div class="Lastestnews blog">
+        <div class="container">
+            <div class="row">
+                
+                {% if genre_list %}
+                    {% for c in genre_list %}
+                        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 margin">
+                            <div class="news-box">
+                                <figure><img src="{% static c.image.name %}" alt="{{ c.image.name }}"/></figure>
+                                <h3><a href = "{% url 'genre_details' c.id%}">{{c.name}}</a></h3>
+                                <p>{{c.description}}</p>                           
+                            </div>
+                        </div>
+                    {% endfor%}
+                {% else %} 
+                    <h1>THERE ARE NO GENRES</h1>
+                {% endif %}
+
+            </div>
+        </div>
+    </div>
+    {% endblock%}
+    
