@@ -2,7 +2,7 @@ from django.shortcuts import render, get_object_or_404, get_list_or_404
 from django.http import HttpResponse, HttpResponseRedirect, Http404
 from django.urls import reverse
 from .forms import ContactForm
-from .models import Contact, Genre
+from .models import Contact, Genre, Author, Song, Album
 from . import views
 
 def index (request) :
@@ -58,6 +58,25 @@ def genre (request) :
     }
     return render(request, "genre.html", context)
 
+def author (request) :
+    authors = get_list_or_404(Author.objects.order_by('name'))
+    form = ContactForm()
+    if request.method == 'POST':
+        form = ContactForm(request.POST)
+        if form.is_valid():
+            contacto = Contact()
+            contacto.name = form.cleaned_data["name"]
+            contacto.phone = form.cleaned_data["phone"]
+            contacto.mail = form.cleaned_data["mail"]
+            contacto.message = form.cleaned_data["message"]
+            contacto.save()
+        return HttpResponseRedirect(reverse(views.index))
+    context = {
+        'author_list': authors,
+        'form' : form
+    }
+    return render(request, "author.html", context)
+
 def album (request) :
     form = ContactForm()
     if request.method == 'POST':
@@ -98,3 +117,10 @@ def genre_details(request, genre_id):
         'genre': genre
     }
     return render(request, "genre_details.html", context)
+
+def author_details(request, author_id):
+    author = get_object_or_404(Author, pk=author_id)
+    context = {
+        'author': author
+    }
+    return render(request, "author_details.html", context)

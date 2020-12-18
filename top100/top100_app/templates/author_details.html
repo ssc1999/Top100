@@ -4,9 +4,9 @@
     {% block active%}
     <li> <a href="{% url 'index'%}">Home</a> </li>
     <li> <a href="{% url 'about'%}">About</a> </li>
-    <li> <a href="{% url 'author'%}"> Authors</a> </li>
+    <li class="active"> <a href="{% url 'author'%}"> Authors</a> </li>
     <li> <a href="{% url 'album'%}"> Albums</a> </li>
-    <li class="active"> <a href="{% url 'genre'%}">Genres</a> </li>
+    <li> <a href="{% url 'genre'%}">Genres</a> </li>
     <li> <a href="{% url 'contact'%}">Contact</a> </li>
     {% endblock %}
 
@@ -19,17 +19,17 @@
         <div class="container">
             <div class="row">
                 
-                {% if genre %}
+                {% if author %}
             
                         <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 margin">
                             <div class="news-box">
-                                <h3>{{genre.name}}</h3>
+                                <h3>{{author.name}}</h3>
                                                          
                             </div>
                         </div>
                     
                 {% else %} 
-                    <h1>THERE IS NO GENRE</h1>
+                    <h1>THERE IS NO AUTHOR</h1>
                 {% endif %}
 
             </div>

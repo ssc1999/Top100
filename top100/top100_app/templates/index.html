@@ -3,66 +3,34 @@
 
     {% block active%}
     <li class="active"> <a href="{% url 'index' %}">Home</a> </li>
-    <li> <a href="{% url 'about' %}">about</a> </li>
+    <li> <a href="{% url 'about' %}">About</a> </li>
+    <li> <a href="{% url 'author'%}"> Authors</a> </li>
     <li><a href="{% url 'album' %}"> Albums</a> </li>
     <li> <a href="{% url 'genre'%}">Genres</a> </li>
     <li> <a href="{% url 'contact' %}">Contact</a> </li>
     {% endblock %}
 
     {% block body %}
-    <section class="banner_section">
-        <div class="banner-main">
-            <img src="{% static 'images/banner2.jpg' %}" />
-            <div class="container">
-
-                <div class="text-bg relative">
-                    <h1>Mp3<br><span class="Perfect">S p o t i f i</span><br>Welcome To The Music</h1>
-                    <p>Lorem ipsum dolor sit amet consec tetur adipiscing elit elit at felis lacinia nec et est
-                        <br> aptent taciti sociosqu ad litora torquent per conubia nostra</p>
-                    <a href="#">Download Now</a>
-                </div>
-
-            </div>
-        </div>
-
-    </section>
 
     <!-- music-box  -->
-    <div class="music-box">
+    <!-- <div class="music-box">
         <div class="container">
             <div class="row">
-                
-                <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
-                    <div class="for-box">
-                        <i><img src="{% static 'icon/icon1.png' %}" alt="icon"/></i>
-                        <h3>Custom Player</h3>
-                        <p>t is a long established fact that a reader will be distracted by the readable </p>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
-                    <div class="for-box">
-                        <i><img src="{% static 'icon/icon2.png' %}" alt="icon"/></i>
-                        <h3>Easy customize</h3>
-                        <p>t is a long established fact that a reader will be distracted by the readable </p>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
-                    <div class="for-box">
-                        <i><img src="{% static 'icon/icon3.png' %}" alt="icon"/></i>
-                        <h3>Music Playlist</h3>
-                        <p>t is a long established fact that a reader will be distracted by the readable </p>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
-                    <div class="for-box">
-                        <i><img src="{% static 'icon/icon4.png' %}" alt="icon"/></i>
-                        <h3>Custom Gallery</h3>
-                        <p>t is a long established fact that a reader will be distracted by the readable </p>
-                    </div>
-                </div>
+                {% if genre_list %}
+                    {% for g in genre_list %}
+                        <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
+                            <div class="for-box">
+                                <i><img src="{% static 'icon/icon1.png' %}" alt="icon"/></i>
+                                <h3>{{ g.name }}</h3>
+                                <p>Canciones más populares</p>
+                                <p>Hola</p>
+                            </div>
+                        </div>
+                    {% endfor %}
+                {% endif %}
             </div>
         </div>
-    </div>
+    </div>-->
     <!-- end music-box  -->
 
     <div class="container-fluid">

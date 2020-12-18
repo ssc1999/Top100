@@ -20,7 +20,7 @@ class Genre(models.Model):
 class Author(models.Model):
     name = models.CharField(max_length = 30, default='Name')
     info = models.CharField(max_length = 200, default='Information')
-    image = models.ImageField(upload_to='top100_app/static/image/authors', verbose_name='Image', null = True, blank=True)
+    image = models.ImageField(upload_to='top100_app/static/image/authors', null = True, blank=True, verbose_name='Image')
 
     def __str__(self):
         return "Author: " + self.name
