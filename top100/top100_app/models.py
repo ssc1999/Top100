@@ -1,4 +1,5 @@
 from django.db import models
+from datetime import datetime
 
 class Contact(models.Model):
     name = models.CharField(max_length = 100, default='Name')
@@ -30,6 +31,7 @@ class Song(models.Model):
     author = models.ForeignKey(Author, on_delete=models.CASCADE)
     genre = models.ManyToManyField(Genre)
     repros = models.IntegerField()
+    date = models.DateTimeField(default = datetime.now)
 
     def __str__(self):
         return "Song: " + self.name

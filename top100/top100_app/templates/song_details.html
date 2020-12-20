@@ -22,4 +22,11 @@
             </div>
         </div>
     </div>
+
+    {% if song %}
+        <h3><a href = "{% url 'author_details' song.id%}">{{song.author}}</a></h3>
+        <h3>{{song.genre}}</h3>
+        <h3>{{song.repros}}</h3>
+    {% endif %}
+
     {% endblock%}

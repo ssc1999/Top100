@@ -119,22 +119,24 @@
                     <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 width">
                         <div class="address">
                             <h3>New Music </h3>
-                            <div class="row">
-                                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 ">
-                                    <figure><img src="{%static 'images/music1.jpg' %}" /></figure>
-                                </div>
-                                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 ">
-                                    <figure><img src="{%static 'images/music2.jpg' %}" /></figure>
-                                </div>
-                                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 ">
-                                    <figure><img src="{%static 'images/music3.jpg' %}" /></figure>
-                                </div>
-                                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 ">
-                                    <figure><img src="{%static 'images/music4.jpg' %}" /></figure>
-                                </div>
-                            </div>
-
+                            
+                                {% if song_date_list %}
+                                    {% for c in song_date_list %}
+                                        <div class="row">
+                                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 ">
+                                            <h3><a href = "{% url 'song_details' c.id%}">{{c.name}}</a></h3>
+                                            <!-- <figure><img src="{%static 'images/music1.jpg' %}" /></figure> -->
+                                            </div>     
+                                        </div>    
+                                    {% endfor%}
+                                {% else %} 
+                                    <h1>THERE ARE NO SONGS</h1>
+                                {% endif %}
+                            
+                                
                         </div>
+
+                        
                     </div>
                 </div>
             </div>

@@ -31,7 +31,7 @@
                                     {% for c in song_list %}
                                         <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 margin">
                                             <div class="news-box">
-                                                <h3>{{c.name}}</h3>
+                                                <h3><a href = "{% url 'song_details' c.id%}">{{c.name}}</a></h3>
                                                 <p>{{c.author}}</p>
                                             </div>
                                         </div>
