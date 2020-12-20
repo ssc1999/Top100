@@ -145,8 +145,29 @@ def author_details(request, author_id):
             contacto.message = form.cleaned_data["message"]
             contacto.save()
         return HttpResponseRedirect(reverse(views.index))
+    song = Song.objects.filter(author=get_object_or_404(Author, pk=author_id)).order_by('name')
     context = {
         'author': author,
-        'form' : form
+        'form' : form,
+        'song_list' : song
     }
     return render(request, "author_details.html", context)
+
+def song_details(request, song_id):
+    song = get_object_or_404(Song, pk=song_id)
+    form = ContactForm()
+    if request.method == 'POST':
+        form = ContactForm(request.POST)
+        if form.is_valid():
+            contacto = Contact()
+            contacto.name = form.cleaned_data["name"]
+            contacto.phone = form.cleaned_data["phone"]
+            contacto.mail = form.cleaned_data["mail"]
+            contacto.message = form.cleaned_data["message"]
+            contacto.save()
+        return HttpResponseRedirect(reverse(views.index))
+    context = {
+        'song': song,
+        'form' : form,
+    }
+    return render(request, "song_details.html", context)

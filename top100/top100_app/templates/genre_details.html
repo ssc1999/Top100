@@ -26,21 +26,21 @@
                 <div class="Lastestnews blog">
                     <div class="container">
                         <div class="row">
-                            {% if genre %} 
-                                    {% if song_list %}
-                                        {% for c in song_list %}
-                                            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 margin">
-                                                <div class="news-box">
-                                                    <p>{{c.name}}</p>
-                                                    <p>{{c.author}}</p>
-                                                </div>
+                            {% if genre %}
+                                {% if song_list %}
+                                    {% for c in song_list %}
+                                        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 margin">
+                                            <div class="news-box">
+                                                <h3>{{c.name}}</h3>
+                                                <p>{{c.author}}</p>
                                             </div>
-                                        {% endfor%}
-                                    {% else %} 
-                                        <h1>THERE ARE NO SONGS OF THIS GENRE</h1>
-                                    {% endif %}
+                                        </div>
+                                    {% endfor%}
+                                {% else %} 
+                                    <h1>THERE ARE NO SONGS OF THIS GENRE</h1>
+                                {% endif %}
                             {% endif %}
-                                </div>
-                            </div>
                         </div>
+                    </div>
+                </div>
     {% endblock%}

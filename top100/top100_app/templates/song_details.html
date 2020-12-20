@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% load static %}
+
+    {% block active%}
+    <li> <a href="{% url 'index'%}">Home</a> </li>
+    <li> <a href="{% url 'about'%}">About</a> </li>
+    <li> <a href="{% url 'author'%}"> Authors</a> </li>
+    <li> <a href="{% url 'album'%}"> Albums</a> </li>
+    <li> <a href="{% url 'genre'%}">Genres</a> </li>
+    <li> <a href="{% url 'contact'%}">Contact</a> </li>
+    {% endblock %}
+
+    {% block body %}
+    <div class="blogbg">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="blogtitlepage">
+                        <h2>{{song.name}}</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endblock%}
