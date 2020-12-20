@@ -18,7 +18,7 @@ def index (request) :
             contacto.save()
         return HttpResponseRedirect(reverse(views.index))
     context = {
-        'form' : form,
+        'form' : form
     }
     return render(request, "index.html", context)
 
@@ -35,7 +35,7 @@ def contact (request) :
             contacto.save()
         return HttpResponseRedirect(reverse(views.contact))
     context = {
-        'form' : form,
+        'form' : form
     }
     return render(request, "contact.html", context)
 
@@ -90,7 +90,7 @@ def album (request) :
             contacto.save()
         return HttpResponseRedirect(reverse(views.index))
     context = {
-        'form' : form,
+        'form' : form
     }
     return render(request, "album.html", context)
 
@@ -107,20 +107,46 @@ def about (request) :
             contacto.save()
         return HttpResponseRedirect(reverse(views.index))
     context = {
-        'form' : form,
+        'form' : form
     }
     return render(request, "about.html", context)
 
 def genre_details(request, genre_id):
     genre = get_object_or_404(Genre, pk=genre_id)
+    form = ContactForm()
+    if request.method == 'POST':
+        form = ContactForm(request.POST)
+        if form.is_valid():
+            contacto = Contact()
+            contacto.name = form.cleaned_data["name"]
+            contacto.phone = form.cleaned_data["phone"]
+            contacto.mail = form.cleaned_data["mail"]
+            contacto.message = form.cleaned_data["message"]
+            contacto.save()
+        return HttpResponseRedirect(reverse(views.index))
+    song = Song.objects.filter(genre=get_object_or_404(Genre, pk=genre_id)).order_by('name')
     context = {
-        'genre': genre
+        'genre': genre,
+        'form' : form,
+        'song_list' : song
     }
     return render(request, "genre_details.html", context)
 
 def author_details(request, author_id):
     author = get_object_or_404(Author, pk=author_id)
+    form = ContactForm()
+    if request.method == 'POST':
+        form = ContactForm(request.POST)
+        if form.is_valid():
+            contacto = Contact()
+            contacto.name = form.cleaned_data["name"]
+            contacto.phone = form.cleaned_data["phone"]
+            contacto.mail = form.cleaned_data["mail"]
+            contacto.message = form.cleaned_data["message"]
+            contacto.save()
+        return HttpResponseRedirect(reverse(views.index))
     context = {
-        'author': author
+        'author': author,
+        'form' : form
     }
     return render(request, "author_details.html", context)

@@ -10,29 +10,37 @@
     <li> <a href="{% url 'contact'%}">Contact</a> </li>
     {% endblock %}
 
-    {% block body %}
-    
-
-    </div>
-    <!-- Lastestnews -->
-    <div class="Lastestnews blog">
-        <div class="container">
-            <div class="row">
-                
-                {% if genre %}
-            
-                        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 margin">
-                            <div class="news-box">
-                                <h3>{{genre.name}}</h3>
-                                                         
+    {% block body %}            
+                <div class="blogbg">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="blogtitlepage">
+                                    <h2>Lista de canciones de {{genre.name}}</h2>
+                                </div>
                             </div>
                         </div>
-                    
-                {% else %} 
-                    <h1>THERE IS NO GENRE</h1>
-                {% endif %}
+                    </div>
+                </div>
 
-            </div>
-        </div>
-    </div>
+                <div class="Lastestnews blog">
+                    <div class="container">
+                        <div class="row">
+                            {% if genre %} 
+                                    {% if song_list %}
+                                        {% for c in song_list %}
+                                            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 margin">
+                                                <div class="news-box">
+                                                    <p>{{c.name}}</p>
+                                                    <p>{{c.author}}</p>
+                                                </div>
+                                            </div>
+                                        {% endfor%}
+                                    {% else %} 
+                                        <h1>THERE ARE NO SONGS OF THIS GENRE</h1>
+                                    {% endif %}
+                            {% endif %}
+                                </div>
+                            </div>
+                        </div>
     {% endblock%}
