@@ -8,3 +8,12 @@ Personalización de una plantilla (estructura de varios niveles) y sus estilos.
 -Visualizar los detalles de un estilo determinado, incluida la lista de canciones que haya de ese estilo.
 -Visualizar los detalles de un intérprete concreto, incluida la lista de canciones que haya de ese intérprete.
 -Visualizar los detalles de una canción concreta, incluido el nombre del estilo al que pertenece y la lista de intérpretes asociados.
+
+Falta hacer:
+1. punto uno
+2. fotos
+3. error al visualizar los atributos many to many
+4. contador de reproducciones
+5. sumar las reproduciones de todas las canciones de un album
+6. como poner que una canción no pertenece a un album
+7. en albums cuando te pongas encima de la foto que salga el nombre
