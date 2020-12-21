@@ -8,3 +8,9 @@ Personalización de una plantilla (estructura de varios niveles) y sus estilos.
 -Visualizar los detalles de un estilo determinado, incluida la lista de canciones que haya de ese estilo.
 -Visualizar los detalles de un intérprete concreto, incluida la lista de canciones que haya de ese intérprete.
 -Visualizar los detalles de una canción concreta, incluido el nombre del estilo al que pertenece y la lista de intérpretes asociados.
+
+Partes:
+1. Falta hacer
+2. Faltan las fotos
+3. Faltan las fotos
+4. Error song_details.html l'28

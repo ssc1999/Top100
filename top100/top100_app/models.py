@@ -28,17 +28,18 @@ class Author(models.Model):
 
 class Song(models.Model):
     name = models.CharField(max_length=20)
-    author = models.ForeignKey(Author, on_delete=models.CASCADE)
+    author = models.ManyToManyField(Author)
     genre = models.ManyToManyField(Genre)
     repros = models.IntegerField()
     date = models.DateTimeField(default = datetime.now)
+    album = models.ForeignKey(Album, on_delete=models.CASCADE)
 
     def __str__(self):
         return "Song: " + self.name
 
 class Album(models.Model):
     name = models.CharField(max_length = 20)
-    author = models.ForeignKey(Author, on_delete=models.CASCADE)
+    author = models.ManyToManyField(Author)
     genre = models.ManyToManyField(Genre)
     song = models.ForeignKey(Song, on_delete=models.CASCADE)
     repros = models.IntegerField()
