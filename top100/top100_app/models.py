@@ -26,24 +26,23 @@ class Author(models.Model):
     def __str__(self):
         return "Author: " + self.name
 
+class Album(models.Model):
+    name = models.CharField(max_length = 20)
+    author = models.ManyToManyField(Author)
+    genre = models.ManyToManyField(Genre)
+    repros = models.IntegerField()
+    image = models.ImageField(upload_to='top100_app/static/image/albums', verbose_name='Image', null = True, blank=True)
+
+    def __str__(self):
+        return "Album: " + self.name
+
 class Song(models.Model):
     name = models.CharField(max_length=20)
     author = models.ManyToManyField(Author)
     genre = models.ManyToManyField(Genre)
     repros = models.IntegerField()
     date = models.DateTimeField(default = datetime.now)
-    album = models.ForeignKey(Album, on_delete=models.CASCADE)
+    album = models.ForeignKey(Album, on_delete=models.CASCADE, null = True)
 
     def __str__(self):
         return "Song: " + self.name
-
-class Album(models.Model):
-    name = models.CharField(max_length = 20)
-    author = models.ManyToManyField(Author)
-    genre = models.ManyToManyField(Genre)
-    song = models.ForeignKey(Song, on_delete=models.CASCADE)
-    repros = models.IntegerField()
-    image = models.ImageField(upload_to='top100_app/static/image/albums', verbose_name='Image', null = True, blank=True)
-
-    def __str__(self):
-        return "Album: " + self.name
