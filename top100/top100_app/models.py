@@ -21,7 +21,7 @@ class Genre(models.Model):
 class Author(models.Model):
     name = models.CharField(max_length = 30, default='Name')
     info = models.CharField(max_length = 200, default='Information')
-    image = models.ImageField(upload_to='top100_app/static/image/authors', null = True, blank=True, verbose_name='Image')
+    image = models.ImageField(upload_to='top100_app/static/images/authors/', blank=True, null=True, verbose_name='Image')
 
     def __str__(self):
         return "Author: " + self.name
@@ -31,7 +31,7 @@ class Album(models.Model):
     author = models.ManyToManyField(Author)
     genre = models.ManyToManyField(Genre)
     repros = models.IntegerField()
-    image = models.ImageField(upload_to='top100_app/static/image/albums', verbose_name='Image', null = True, blank=True)
+    image = models.ImageField(upload_to='top100_app/static/images/albums/', verbose_name='Image', null = True, blank=True)
 
     def __str__(self):
         return "Album: " + self.name

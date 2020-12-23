@@ -16,4 +16,3 @@ Falta hacer:
 4. contador de reproducciones
 5. sumar las reproduciones de todas las canciones de un album
 6. como poner que una canción no pertenece a un album
-7. en albums cuando te pongas encima de la foto que salga el nombre
