@@ -41,11 +41,11 @@
                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 margin">
                     <div class="Albums-box">
                         <figure>
-                            <a href="{%static 'images/album1.jpg' %}" class="fancybox" rel="ligthbox">
+                            <a href="{% url 'album_details' c.id%}" class="fancybox" rel="ligthbox">
                                 <img src="{%static 'images/album1.jpg' %}" class="zoom img-fluid " alt="">
                             </a>
                             <span class="hoverle">
-                        <a href="{%static 'images/album1.jpg' %}" class="fancybox" rel="ligthbox"><img src="{%static 'images/search.png' %}"></a>
+                        <a href="{% url 'album_details' c.id%}" class="fancybox" rel="ligthbox"><p>{{c.name}}</p> </a>
                         </span>
                         </figure>
                     </div>
@@ -54,7 +54,6 @@
                 {% else %} 
                     <h1>THERE ARE NO ALBUMS</h1>
                 {% endif %}
-
             </div>
         </div>
     </div>

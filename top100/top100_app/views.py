@@ -125,7 +125,7 @@ def about (request) :
     }
     return render(request, "about.html", context)
 
-def genre_details(request, genre_id):
+def genre_details(request, genre_id) :
     genre = get_object_or_404(Genre, pk=genre_id)
     song = Song.objects.filter(genre=get_object_or_404(Genre, pk=genre_id)).order_by('name')
     songs_date = get_list_or_404(Song.objects.order_by('date')[: 4])
@@ -148,7 +148,7 @@ def genre_details(request, genre_id):
     }
     return render(request, "genre_details.html", context)
 
-def author_details(request, author_id):
+def author_details(request, author_id) :
     author = get_object_or_404(Author, pk=author_id)
     song = Song.objects.filter(author=get_object_or_404(Author, pk=author_id)).order_by('name')
     songs_date = get_list_or_404(Song.objects.order_by('date')[: 4])
@@ -171,7 +171,7 @@ def author_details(request, author_id):
     }
     return render(request, "author_details.html", context)
 
-def song_details(request, song_id):
+def song_details(request, song_id) :
     song = get_object_or_404(Song, pk=song_id)
     songs_date = get_list_or_404(Song.objects.order_by('date')[: 4])
     form = ContactForm()
@@ -191,3 +191,26 @@ def song_details(request, song_id):
         'form' : form
     }
     return render(request, "song_details.html", context)
+
+def album_details(request, album_id) :
+    album = get_object_or_404(Album, pk=album_id)
+    song = Song.objects.filter(album=get_object_or_404(Album, pk=album_id)).order_by('name')
+    songs_date = get_list_or_404(Song.objects.order_by('date')[: 4])
+    form = ContactForm()
+    if request.method == 'POST':
+        form = ContactForm(request.POST)
+        if form.is_valid():
+            contacto = Contact()
+            contacto.name = form.cleaned_data["name"]
+            contacto.phone = form.cleaned_data["phone"]
+            contacto.mail = form.cleaned_data["mail"]
+            contacto.message = form.cleaned_data["message"]
+            contacto.save()
+        return HttpResponseRedirect(reverse(views.index))
+    context = {
+        'album': album,
+        'song_list' : song,
+        'song_date_list' : songs_date,
+        'form' : form
+    }
+    return render(request, "album_details.html", context)
