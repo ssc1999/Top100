@@ -45,7 +45,7 @@
                                 <img src="{%static 'images/album1.jpg' %}" class="zoom img-fluid " alt="">
                             </a>
                             <span class="hoverle">
-                        <a href="{% url 'album_details' c.id%}" class="fancybox" rel="ligthbox"><h2>{{c.name}}</h2></a>
+                        <a href="{% url 'album_details' c.id%}" class="fancybox" rel="ligthbox"><h1>{{c.name}}<br>{{c.author}}</h1></a>
                         </span>
                         </figure>
                     </div>
