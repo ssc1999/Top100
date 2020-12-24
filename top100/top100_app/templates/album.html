@@ -44,7 +44,7 @@
                                         <a href="{% url 'album_details' c.id%}" class="fancybox" rel="ligthbox">
                                         <img src="/{{ c.image.name }}" alt="{{ c.image.name }}"/></a>
                                         <span class="hoverle">
-                                    <a href="{% url 'album_details' c.id%}" class="fancybox" rel="ligthbox"><h1>{{c.name}}<br>{% for tag in c.author.all %} {{tag.name}} {% endfor %}</h1></a>
+                                    <a href="{% url 'album_details' c.id%}" class="fancybox" rel="ligthbox"><h1>{{c.name}}<br>{% for author in c.author.all %} {{author.name}} {% endfor %}</h1></a>
                                     </span>
                                     </figure>
                                 </div>
