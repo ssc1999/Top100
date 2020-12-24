@@ -38,17 +38,17 @@
             <div class="row">
                 {% if album_list %}
                     {% for c in album_list %}
-                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 margin">
-                    <div class="Albums-box">
-                        <figure>
-                            <a href="{% url 'album_details' c.id%}" class="fancybox" rel="ligthbox">
-                            <img src="/{{ c.image.name }}" alt="{{ c.image.name }}"/></a>
-                            <span class="hoverle">
-                        <a href="{% url 'album_details' c.id%}" class="fancybox" rel="ligthbox"><h1>{{c.name}}<br>{{c.author}}</h1></a>
-                        </span>
-                        </figure>
-                    </div>
-                </div>
+                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 margin">
+                                <div class="Albums-box">
+                                    <figure>
+                                        <a href="{% url 'album_details' c.id%}" class="fancybox" rel="ligthbox">
+                                        <img src="/{{ c.image.name }}" alt="{{ c.image.name }}"/></a>
+                                        <span class="hoverle">
+                                    <a href="{% url 'album_details' c.id%}" class="fancybox" rel="ligthbox"><h1>{{c.name}}<br>{% for tag in c.author.all %} {{tag.name}} {% endfor %}</h1></a>
+                                    </span>
+                                    </figure>
+                                </div>
+                            </div>
                     {% endfor%}
                 {% else %} 
                     <h1>THERE ARE NO ALBUMS</h1>

@@ -88,6 +88,7 @@ def author (request) :
 def album (request) :
     albums = get_list_or_404(Album.objects.order_by('name'))
     songs_date = get_list_or_404(Song.objects.order_by('date')[: 4])
+
     form = ContactForm()
     if request.method == 'POST':
         form = ContactForm(request.POST)
@@ -103,6 +104,7 @@ def album (request) :
         'album_list': albums,
         'song_date_list' : songs_date,
         'form' : form
+
     }
     return render(request, "album.html", context)
 
