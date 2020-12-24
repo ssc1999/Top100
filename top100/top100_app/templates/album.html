@@ -42,8 +42,7 @@
                     <div class="Albums-box">
                         <figure>
                             <a href="{% url 'album_details' c.id%}" class="fancybox" rel="ligthbox">
-                                <img src="{%static 'images/album1.jpg' %}" class="zoom img-fluid " alt="">
-                            </a>
+                            <img src="/{{ c.image.name }}" alt="{{ c.image.name }}"/></a>
                             <span class="hoverle">
                         <a href="{% url 'album_details' c.id%}" class="fancybox" rel="ligthbox"><h1>{{c.name}}<br>{{c.author}}</h1></a>
                         </span>

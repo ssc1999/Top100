@@ -11,8 +11,9 @@ Personalización de una plantilla (estructura de varios niveles) y sus estilos.
 
 Falta hacer:
 1. punto uno
-2. fotos
 3. error al visualizar los atributos many to many
 4. contador de reproducciones
 5. sumar las reproduciones de todas las canciones de un album
 6. como poner que una canción no pertenece a un album
+7. tamaño de las fotos
+8. que la foto de la canción sea la misma que la del album
