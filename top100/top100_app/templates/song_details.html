@@ -25,7 +25,7 @@
 
     {% if song %}
         <h3>{% for author in song.author.all %} {{author.name}} {% endfor %}</h3>
-        <h3>{% for genre in song.genre.all %} {{genre.name}} {% endfor %}</h3>
+        <h3>{{song.genre }} </h3>
         <h3>Repros: {{song.repros}}</h3>
         <h3>{{song.album}}</h3>
     {% endif %}
