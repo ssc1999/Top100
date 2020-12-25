@@ -14,6 +14,7 @@ class Genre(models.Model):
     name = models.CharField(max_length = 30, default='Name')
     description = models.CharField(max_length = 300, default='Description')
     image = models.ImageField(upload_to='top100_app/static/images/genres', blank=True, null=False, verbose_name='Image')
+  
 
     def __str__(self):
         return "Genre: " + self.name
@@ -29,7 +30,7 @@ class Author(models.Model):
 class Album(models.Model):
     name = models.CharField(max_length = 20)
     author = models.ManyToManyField(Author)
-    genre = models.ManyToManyField(Genre)
+    genre = models.ForeignKey(Genre, on_delete=models.CASCADE, null = True)
     repros = models.IntegerField()
     image = models.ImageField(upload_to='top100_app/static/images/albums', verbose_name='Image', null = True, blank=True)
 
@@ -39,7 +40,7 @@ class Album(models.Model):
 class Song(models.Model):
     name = models.CharField(max_length=20)
     author = models.ManyToManyField(Author)
-    genre = models.ManyToManyField(Genre)
+    genre = models.ForeignKey(Genre, on_delete=models.CASCADE, null = True)
     repros = models.IntegerField()
     date = models.DateTimeField(default = datetime.now)
     album = models.ForeignKey(Album, on_delete=models.CASCADE, null = True)
