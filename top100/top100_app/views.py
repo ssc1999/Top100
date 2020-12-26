@@ -6,6 +6,7 @@ from .models import Contact, Genre, Author, Song, Album
 from . import views
 
 def index (request) :
+    songs_date = get_list_or_404(Song.objects.order_by('date')[: 4])
     # songs_repros = get_list_or_404(Song.objects.order_by('repros')[:2])
     genre_list = get_list_or_404(Genre.objects.order_by('name'))
     songs_repros = []
@@ -23,6 +24,7 @@ def index (request) :
             contacto.save()
         return HttpResponseRedirect(reverse(views.index))
     context = {
+        'song_date_list' : songs_date,
         'song_repros' : songs_repros,
         'genre_list' : genre_list,
         'form' : form
