@@ -28,6 +28,7 @@
         <h3>{{song.genre }} </h3>
         <h3>Repros: {{song.repros}}</h3>
         <h3>{{song.album}}</h3>
+        <img src="/{{ song.album.image.name }}" alt="{{ song.album.image.name }}"/>
     {% endif %}
 
     {% endblock%}

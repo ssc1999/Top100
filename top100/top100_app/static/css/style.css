@@ -1531,12 +1531,29 @@
      background:#fff;
      box-shadow: #ddd 0px 0px 8px 4px;
 }
+
+ .Lastestnews .news-box2 {
+     background:#fff;
+     box-shadow: #ddd 0px 0px 8px 4px;
+}
+
  .Lastestnews .news-box figure {
      margin: 0;
 }
+
+ .Lastestnews .news-box2 figure {
+    margin-left: 35px;
+}
+
  .Lastestnews .news-box figure img {
      width: 380px;
      height: 205px;
+     margin-left: 35px;
+}
+
+ .Lastestnews .news-box2 figure img {
+     width: 300px;
+     height: 280px;
 }
  .Lastestnews .news-box h3 {
      font-size: 22px;
@@ -1545,16 +1562,39 @@
      font-weight: 500;
      padding: 20px 20px 4px 20px;
 }
+
+ .Lastestnews .news-box2 h3 {
+     font-size: 22px;
+     line-height: 24px;
+     color: #060606;
+     font-weight: 500;
+     padding: 20px 20px 4px 20px;
+}
+
  .Lastestnews .news-box span {
      color: #01b890;
      margin-left: 20px;
 }
+
+ .Lastestnews .news-box2 span {
+     color: #01b890;
+     margin-left: 20px;
+}
+
  .Lastestnews .news-box p{
      color: #7b7a7a;
      font-size:16px;
      line-height: 23px;
      padding: 7px 20px 20px 20px;
 }
+
+ .Lastestnews .news-box2 p{
+     color: #7b7a7a;
+     font-size:16px;
+     line-height: 23px;
+     padding: 7px 20px 20px 20px;
+}
+
 /** Lastestnews **/
  .Albums {
      margin-bottom: 90px;
