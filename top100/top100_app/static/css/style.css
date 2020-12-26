@@ -1535,7 +1535,8 @@
      margin: 0;
 }
  .Lastestnews .news-box figure img {
-     width: 100%;
+     width: 380px;
+     height: 205px;
 }
  .Lastestnews .news-box h3 {
      font-size: 22px;
