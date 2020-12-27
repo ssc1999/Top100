@@ -7,11 +7,18 @@ from . import views
 
 def index (request) :
     songs_date = get_list_or_404(Song.objects.order_by('date')[: 3])
-    # songs_repros = get_list_or_404(Song.objects.order_by('repros')[:2])
     genre_list = get_list_or_404(Genre.objects.order_by('name'))
-    songs_repros = []
-    for g in genre_list:
-        songs_repros.append(Song.objects.filter(genre=g).order_by('repros')[: 2])
+    topHitsByGenre = []
+    
+    for genre in genre_list:
+#         [
+#            {'genero': 'Pop', 'canciones': <QuerySet [<Song: Monster>, <Song: Lost in Japan>]>},
+#            {'genero': 'Reggaeton', 'canciones': <QuerySet []>},
+#            {'genero': 'Rock', 'canciones': <QuerySet []>},
+#            {'genero': 'Trap', 'canciones': <QuerySet [<Song: Mami Chula>, <Song: Mala Vida>]>}
+#         ]
+        topHitsByGenre.append({"genre": genre.name, "songs": Song.objects.filter(genre=genre).order_by('repros')[: 2]})
+        
     form = ContactForm()
     if request.method == 'POST':
         form = ContactForm(request.POST)
@@ -25,7 +32,7 @@ def index (request) :
         return HttpResponseRedirect(reverse(views.index))
     context = {
         'song_date_list' : songs_date,
-        'song_repros' : songs_repros,
+        'topHitsByGenre' : topHitsByGenre,
         'genre_list' : genre_list,
         'form' : form
     }
