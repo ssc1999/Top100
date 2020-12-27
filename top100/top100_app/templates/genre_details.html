@@ -30,9 +30,10 @@
                                 {% if song_list %}
                                     {% for c in song_list %}
                                         <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 margin">
-                                            <div class="news-box">
+                                            <div class="news-box2">
                                                 <h3><a href = "{% url 'song_details' c.id%}">{{c.name}}</a></h3>
                                                 <p>{% for author in c.author.all %} {{author.name}} {% endfor %}</p>
+                                                <figure><img src="/{{ c.album.image.name }}" alt="{{ c.album.image.name }}"/></figure>
                                             </div>
                                         </div>
                                     {% endfor%}

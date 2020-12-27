@@ -6,11 +6,19 @@ from .models import Contact, Genre, Author, Song, Album
 from . import views
 
 def index (request) :
-    # songs_repros = get_list_or_404(Song.objects.order_by('repros')[:2])
+    songs_date = get_list_or_404(Song.objects.order_by('date')[: 3])
     genre_list = get_list_or_404(Genre.objects.order_by('name'))
-    songs_repros = []
-    for g in genre_list:
-        songs_repros.append(Song.objects.filter(genre=g).order_by('repros')[: 2])
+    topHitsByGenre = []
+    
+    for genre in genre_list:
+#         [
+#            {'genero': 'Pop', 'canciones': <QuerySet [<Song: Monster>, <Song: Lost in Japan>]>},
+#            {'genero': 'Reggaeton', 'canciones': <QuerySet []>},
+#            {'genero': 'Rock', 'canciones': <QuerySet []>},
+#            {'genero': 'Trap', 'canciones': <QuerySet [<Song: Mami Chula>, <Song: Mala Vida>]>}
+#         ]
+        topHitsByGenre.append({"genre": genre.name, "songs": Song.objects.filter(genre=genre).order_by('repros')[: 2]})
+        
     form = ContactForm()
     if request.method == 'POST':
         form = ContactForm(request.POST)
@@ -23,14 +31,15 @@ def index (request) :
             contacto.save()
         return HttpResponseRedirect(reverse(views.index))
     context = {
-        'song_repros' : songs_repros,
+        'song_date_list' : songs_date,
+        'topHitsByGenre' : topHitsByGenre,
         'genre_list' : genre_list,
         'form' : form
     }
     return render(request, "index.html", context)
 
 def contact (request) :
-    songs_date = get_list_or_404(Song.objects.order_by('date')[: 4])
+    songs_date = get_list_or_404(Song.objects.order_by('date')[: 3])
     form = ContactForm()
     if request.method == 'POST':
         form = ContactForm(request.POST)
@@ -50,7 +59,7 @@ def contact (request) :
 
 def genre (request) :
     genres = get_list_or_404(Genre.objects.order_by('name'))
-    songs_date = get_list_or_404(Song.objects.order_by('date')[: 4])
+    songs_date = get_list_or_404(Song.objects.order_by('date')[: 3])
     form = ContactForm()
     if request.method == 'POST':
         form = ContactForm(request.POST)
@@ -71,7 +80,7 @@ def genre (request) :
 
 def author (request) :
     authors = get_list_or_404(Author.objects.order_by('name'))
-    songs_date = get_list_or_404(Song.objects.order_by('date')[: 4])
+    songs_date = get_list_or_404(Song.objects.order_by('date')[: 3])
     form = ContactForm()
     if request.method == 'POST':
         form = ContactForm(request.POST)
@@ -92,7 +101,7 @@ def author (request) :
 
 def album (request) :
     albums = get_list_or_404(Album.objects.order_by('name'))
-    songs_date = get_list_or_404(Song.objects.order_by('date')[: 4])
+    songs_date = get_list_or_404(Song.objects.order_by('date')[: 3])
     form = ContactForm()
     if request.method == 'POST':
         form = ContactForm(request.POST)
@@ -113,7 +122,7 @@ def album (request) :
     return render(request, "album.html", context)
 
 def about (request) :
-    songs_date = get_list_or_404(Song.objects.order_by('date')[: 4])
+    songs_date = get_list_or_404(Song.objects.order_by('date')[: 3])
     form = ContactForm()
     if request.method == 'POST':
         form = ContactForm(request.POST)
@@ -134,7 +143,7 @@ def about (request) :
 def genre_details(request, genre_id) :
     genre = get_object_or_404(Genre, pk=genre_id)
     song = Song.objects.filter(genre=get_object_or_404(Genre, pk=genre_id)).order_by('name')
-    songs_date = get_list_or_404(Song.objects.order_by('date')[: 4])
+    songs_date = get_list_or_404(Song.objects.order_by('date')[: 3])
     form = ContactForm()
     if request.method == 'POST':
         form = ContactForm(request.POST)
@@ -157,7 +166,7 @@ def genre_details(request, genre_id) :
 def author_details(request, author_id) :
     author = get_object_or_404(Author, pk=author_id)
     song = Song.objects.filter(author=get_object_or_404(Author, pk=author_id)).order_by('name')
-    songs_date = get_list_or_404(Song.objects.order_by('date')[: 4])
+    songs_date = get_list_or_404(Song.objects.order_by('date')[: 3])
     form = ContactForm()
     if request.method == 'POST':
         form = ContactForm(request.POST)
@@ -179,7 +188,7 @@ def author_details(request, author_id) :
 
 def song_details(request, song_id) :
     song = get_object_or_404(Song, pk=song_id)
-    songs_date = get_list_or_404(Song.objects.order_by('date')[: 4])
+    songs_date = get_list_or_404(Song.objects.order_by('date')[: 3])
     form = ContactForm()
     if request.method == 'POST':
         form = ContactForm(request.POST)
@@ -201,7 +210,7 @@ def song_details(request, song_id) :
 def album_details(request, album_id) :
     album = get_object_or_404(Album, pk=album_id)
     song = Song.objects.filter(album=get_object_or_404(Album, pk=album_id)).order_by('name')
-    songs_date = get_list_or_404(Song.objects.order_by('date')[: 4])
+    songs_date = get_list_or_404(Song.objects.order_by('date')[: 3])
     form = ContactForm()
     if request.method == 'POST':
         form = ContactForm(request.POST)
