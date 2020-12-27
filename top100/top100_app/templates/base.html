@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 {% load static %}
+{% load i18n %}
 
 <head>
     <!-- basic -->
@@ -61,6 +62,19 @@
                                     <ul class="menu-area-main">
                                         {% block active %}{% endblock %}
                                     </ul>
+                                    {% get_available_languages as LANGUAGES %}
+                                    {% get_language_info_list for LANGUAGES as languages %}           
+                                    <div class="fixed-action-btn">
+                                        <form action="{% url 'set_language' %}" method="POST" id="myform">
+                                        {% csrf_token %}
+                                        <p>{% trans 'Choose a language' %}</p>
+                                        {% for language in languages %}
+                                                <button class="lang_button" type="submit" value="{{language.code}}" name="language">                                                 
+                                                    {{language.name}}
+                                                </button> 
+                                            {% endfor %}
+                                        </form>
+                                    </div>
                                 </nav>
                             </div>
                         </div>
@@ -86,11 +100,11 @@
                 <div class="row">
                     <div class="col-lg-3 col-md-6 col-sm-12 width">
                         <div class="address">
-                            <h3>Contact Us</h3>
+                            <h3>{% trans 'Contact Us' %}</h3>
                             <ul class="locarion_icon">
-                                <li><img src="{%static 'icon/1.png' %}" alt="icon" />104 New York , USA</li>
-                                <li><img src="{%static 'icon/2.png' %}" alt="icon" />Phone : ( +71 5896547 )</li>
-                                <li><img src="{%static 'icon/3.png' %}" alt="icon" />Email : demo@email.com</li>
+                                <li><img src="{%static 'icon/1.png' %}" alt="icon" />{% trans '104 New York , USA' %}</li>
+                                <li><img src="{%static 'icon/2.png' %}" alt="icon" />{% trans 'Phone : ( +71 5896547 )' %}</li>
+                                <li><img src="{%static 'icon/3.png' %}" alt="icon" />{% trans 'Email : demo@email.com' %}</li>
 
                             </ul>
 
@@ -104,13 +118,13 @@
                     </div>
                     <div class="col-lg-6 col-md-6 col-sm-12 width">
                         <div class="address">
-                            <h3>Get In Touch</h3>
+                            <h3>{% trans 'Get In Touch' %}</h3>
                                 <form action="contact" method="post">
                                     <div class="row">
                                         <div class="col-sm-12">
                                             {% csrf_token %}
                                             {{form.as_p}}
-                                            <button class="send">Send</button>
+                                            <button class="send">{% trans 'Send' %}</button>
                                         </div>
                                     </div>
                                 </form>
@@ -118,7 +132,7 @@
                     </div>
                     <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 width">
                         <div class="address">
-                            <h3>New Music </h3>
+                            <h3>{% trans 'New Music' %}</h3>
                                 {% if song_date_list %}
                                     {% for c in song_date_list %}
                                         <div class="row">
@@ -129,7 +143,7 @@
                                         </div>    
                                     {% endfor%}
                                 {% else %} 
-                                    <h1>THERE ARE NO SONGS</h1>
+                                    <h1>{% trans 'THERE ARE NO SONGS' %}</h1>
                                 {% endif %}             
                         </div>
                     
@@ -137,7 +151,7 @@
                 </div>
             </div>
             <div class="copyright">
-                <p>© 2019 All Rights Reserved. <a href="https://html.design/">Free html Templates</a></p>
+                <p>{% trans '© 2019 All Rights Reserved.' %} <a href="https://html.design/">{% trans 'Free html Templates' %}</a></p>
             </div>
         </div>
     </footr>

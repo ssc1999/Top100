@@ -1,11 +1,12 @@
 {% extends "base.html" %}
 {% load static %}
+{% load i18n %}
 
     {% block active%}
-    <li> <a href="{% url 'index' %}">Home</a> </li>
-    <li> <a href="{% url 'about' %}">About</a> </li>
-    <li> <a href="{% url 'author'%}"> Authors</a> </li>
-    <li><a href="{% url 'album' %}"> Albums</a> </li>
-    <li> <a href="{% url 'genre' %}">Genres</a> </li>
-    <li class="active"> <a href="{% url 'contact' %}">Contact</a> </li>
+    <li> <a href="{% url 'index' %}">{% trans 'Home' %}</a> </li>
+    <li> <a href="{% url 'about' %}">{% trans 'About' %}</a> </li>
+    <li> <a href="{% url 'author'%}">{% trans 'Authors' %}</a> </li>
+    <li><a href="{% url 'album' %}">{% trans 'Albums' %}</a> </li>
+    <li> <a href="{% url 'genre' %}">{% trans 'Genres' %}</a> </li>
+    <li class="active"> <a href="{% url 'contact' %}">{% trans 'Contact' %}</a> </li>
     {% endblock %}

@@ -1,13 +1,14 @@
 {% extends "base.html" %}
 {% load static %}
+{% load i18n %}
 
     {% block active%}
-    <li> <a href="{% url 'index'%}">Home</a> </li>
-    <li> <a href="{% url 'about'%}">About</a> </li>
-    <li> <a href="{% url 'author'%}"> Authors</a> </li>
-    <li> <a href="{% url 'album'%}"> Albums</a> </li>
-    <li> <a href="{% url 'genre'%}">Genres</a> </li>
-    <li> <a href="{% url 'contact'%}">Contact</a> </li>
+    <li> <a href="{% url 'index'%}">{% trans 'Home' %}</a> </li>
+    <li> <a href="{% url 'about'%}">{% trans 'About' %}</a> </li>
+    <li> <a href="{% url 'author'%}">{% trans 'Authors' %}</a> </li>
+    <li> <a href="{% url 'album'%}">{% trans 'Albums' %}</a> </li>
+    <li> <a href="{% url 'genre'%}">{% trans 'Genres' %}</a> </li>
+    <li> <a href="{% url 'contact'%}">{% trans 'Contact' %}</a> </li>
     {% endblock %}
 
     {% block body %}
@@ -20,10 +21,10 @@
                     </div>
                     {% if song %}
                         <p>
-                            <h2>Author: {% for author in song.author.all %} {{author.name}} {% endfor %}</h2>
-                            <h2>Genre: {{song.genre }} </h2>
-                            <h2>Repros: {{song.repros}}</h2>
-                            <h2>Album: {{song.album}}</h2>
+                            <h2>{% trans 'Author: {% for author in song.author.all %} {{author.name}} {% endfor %}' %}</h2>
+                            <h2>{% trans 'Genre: {{song.genre }}' %}</h2>
+                            <h2>{% trans 'Repros: {{song.repros}}' %}</h2>
+                            <h2>{% trans 'Album: {{song.album}}' %}</h2>
                             <img src="/{{ song.album.image.name }}" alt="{{ song.album.image.name }}"/>
                         </p>
                     {% endif %}

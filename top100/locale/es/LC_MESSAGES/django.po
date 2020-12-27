@@ -1,0 +1,209 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-12-27 21:17+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: .\top100_app\templates\album.html:6
+#: .\top100_app\templates\album_details.html:6
+#: .\top100_app\templates\author.html:6
+#: .\top100_app\templates\author_details.html:6
+#: .\top100_app\templates\contact.html:6 .\top100_app\templates\genre.html:6
+#: .\top100_app\templates\genre_details.html:6
+#: .\top100_app\templates\index.html:6
+#: .\top100_app\templates\song_details.html:6
+msgid "Home"
+msgstr "Inicio"
+
+#: .\top100_app\templates\album.html:7
+#: .\top100_app\templates\album_details.html:7
+#: .\top100_app\templates\author.html:7
+#: .\top100_app\templates\author_details.html:7
+#: .\top100_app\templates\contact.html:7 .\top100_app\templates\genre.html:7
+#: .\top100_app\templates\genre_details.html:7
+#: .\top100_app\templates\index.html:7
+#: .\top100_app\templates\song_details.html:7
+msgid "About"
+msgstr "Sobre"
+
+#: .\top100_app\templates\album.html:8
+#: .\top100_app\templates\album_details.html:8
+#: .\top100_app\templates\author.html:8 .\top100_app\templates\author.html:20
+#: .\top100_app\templates\author_details.html:8
+#: .\top100_app\templates\contact.html:8 .\top100_app\templates\genre.html:8
+#: .\top100_app\templates\genre_details.html:8
+#: .\top100_app\templates\index.html:8
+#: .\top100_app\templates\song_details.html:8
+msgid "Authors"
+msgstr "Autor"
+
+#: .\top100_app\templates\album.html:9 .\top100_app\templates\album.html:20
+#: .\top100_app\templates\album_details.html:9
+#: .\top100_app\templates\author.html:9
+#: .\top100_app\templates\author_details.html:9
+#: .\top100_app\templates\contact.html:9 .\top100_app\templates\genre.html:9
+#: .\top100_app\templates\genre_details.html:9
+#: .\top100_app\templates\index.html:9
+#: .\top100_app\templates\song_details.html:9
+msgid "Albums"
+msgstr "Álbum"
+
+#: .\top100_app\templates\album.html:10
+#: .\top100_app\templates\album_details.html:10
+#: .\top100_app\templates\author.html:10
+#: .\top100_app\templates\author_details.html:10
+#: .\top100_app\templates\contact.html:10 .\top100_app\templates\genre.html:10
+#: .\top100_app\templates\genre.html:20
+#: .\top100_app\templates\genre_details.html:10
+#: .\top100_app\templates\index.html:10
+#: .\top100_app\templates\song_details.html:10
+msgid "Genres"
+msgstr "Género"
+
+#: .\top100_app\templates\album.html:11
+#: .\top100_app\templates\album_details.html:11
+#: .\top100_app\templates\author.html:11
+#: .\top100_app\templates\author_details.html:11
+#: .\top100_app\templates\contact.html:11 .\top100_app\templates\genre.html:11
+#: .\top100_app\templates\genre_details.html:11
+#: .\top100_app\templates\index.html:11
+#: .\top100_app\templates\song_details.html:11
+msgid "Contact"
+msgstr "Contacto"
+
+#: .\top100_app\templates\album.html:55
+msgid "THERE ARE NO ALBUMS"
+msgstr "NO HAY ALBUMES"
+
+#: .\top100_app\templates\album_details.html:28
+msgid "THERE ARE NO SONGS IN THIS ALBUM"
+msgstr "NO HAY CANCIONES EN ESTE ALBUM"
+
+#: .\top100_app\templates\author.html:42
+msgid "THERE ARE NO AUTHORS"
+msgstr "NO HAY AUTORES"
+
+#: .\top100_app\templates\author_details.html:20
+msgid "Songs of {{author.name}}"
+msgstr "Canciones de {{author.name}}"
+
+#: .\top100_app\templates\author_details.html:40
+msgid "THERE ARE NO SONGS OF THIS AUTHOR"
+msgstr "NO HAY CANCIONES DE ESTE AUTOR"
+
+#: .\top100_app\templates\base.html:70
+msgid "Choose a language"
+msgstr "Elige un idioma"
+
+#: .\top100_app\templates\base.html:103
+msgid "Contact Us"
+msgstr "Contáctanos"
+
+#: .\top100_app\templates\base.html:105
+msgid "104 New York , USA"
+msgstr "104 Nueva York, EEUU"
+
+#: .\top100_app\templates\base.html:106
+msgid "Phone : ( +71 5896547 )"
+msgstr "Teléfono : ( +71 5896547 )"
+
+#: .\top100_app\templates\base.html:107
+msgid "Email : demo@email.com"
+msgstr "Correo : demo@gmail.com"
+
+#: .\top100_app\templates\base.html:121
+msgid "Get In Touch"
+msgstr "Estate en contacto"
+
+#: .\top100_app\templates\base.html:127
+msgid "Send"
+msgstr "Enviar"
+
+#: .\top100_app\templates\base.html:135
+msgid "New Music"
+msgstr "Nueva Música"
+
+#: .\top100_app\templates\base.html:146
+msgid "THERE ARE NO SONGS"
+msgstr "NO HAY CANCIONES"
+
+#: .\top100_app\templates\base.html:154
+msgid "© 2019 All Rights Reserved."
+msgstr "Todos los derechos reservados © 2019"
+
+#: .\top100_app\templates\base.html:154
+msgid "Free html Templates"
+msgstr "Modelos HTML gratis"
+
+#: .\top100_app\templates\genre.html:41
+msgid "THERE ARE NO GENRES"
+msgstr "NO HAY GÉNEROS"
+
+#: .\top100_app\templates\genre_details.html:20
+msgid "Songs of {{genre.name}}"
+msgstr "Canciones de {{genre.name}}"
+
+#: .\top100_app\templates\genre_details.html:42
+msgid "THERE ARE NO SONGS OF THIS GENRE"
+msgstr "NO HAY CANCIONES DE ESTE GÉNERO"
+
+#: .\top100_app\templates\index.html:20
+msgid "Most listened songs"
+msgstr "Canciones más escuchadas"
+
+#: .\top100_app\templates\index.html:51
+msgid "MEET OUR Music STARS"
+msgstr "Conoce a nuestras estrellas"
+
+#: .\top100_app\templates\index.html:52
+msgid ""
+"It is a long established fact that a reader will be distracted by the "
+"readable content of a page when looking at its layout. The point of using "
+"Lorem"
+msgstr "El lector no se entera de nada"
+
+#: .\top100_app\templates\index.html:53
+msgid "Read More"
+msgstr "Leer más"
+
+#: .\top100_app\templates\index.html:66
+msgid "Newsletter"
+msgstr "Boletín"
+
+#: .\top100_app\templates\index.html:72
+msgid "Subscribe"
+msgstr "Suscribirse"
+
+#: .\top100_app\templates\song_details.html:25
+msgid "Genre: {{song.genre }}"
+msgstr "Género: {{song.genre}}"
+
+#: .\top100_app\templates\song_details.html:26
+msgid "Repros: {{song.repros}}"
+msgstr "Reproducciones: {{song.repros}}"
+
+#: .\top100_app\templates\song_details.html:27
+msgid "Album: {{song.album}}"
+msgstr "Álbum: {{song.album}}"
+
+#: .\top100_syte\settings.py:114
+msgid "Español"
+msgstr "Spanish"
+
+#: .\top100_syte\settings.py:115
+msgid "English"
+msgstr "Inglés"

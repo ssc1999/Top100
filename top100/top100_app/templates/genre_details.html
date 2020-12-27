@@ -1,13 +1,14 @@
 {% extends "base.html" %}
 {% load static %}
+{% load i18n %}
 
     {% block active%}
-    <li> <a href="{% url 'index'%}">Home</a> </li>
-    <li> <a href="{% url 'about'%}">About</a> </li>
-    <li> <a href="{% url 'author'%}"> Authors</a> </li>
-    <li> <a href="{% url 'album'%}"> Albums</a> </li>
-    <li class="active"> <a href="{% url 'genre'%}">Genres</a> </li>
-    <li> <a href="{% url 'contact'%}">Contact</a> </li>
+    <li> <a href="{% url 'index'%}">{% trans 'Home' %}</a> </li>
+    <li> <a href="{% url 'about'%}">{% trans 'About' %}</a> </li>
+    <li> <a href="{% url 'author'%}">{% trans 'Authors' %}</a> </li>
+    <li> <a href="{% url 'album'%}">{% trans 'Albums' %}</a> </li>
+    <li class="active"> <a href="{% url 'genre'%}">{% trans 'Genres' %}</a> </li>
+    <li> <a href="{% url 'contact'%}">{% trans 'Contact' %}</a> </li>
     {% endblock %}
 
     {% block body %}            
@@ -16,7 +17,7 @@
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="blogtitlepage">
-                                    <h2>Lista de canciones de {{genre.name}}</h2>
+                                    <h2>{% trans 'Songs of {{genre.name}}' %}</h2>
                                 </div>
                             </div>
                         </div>
@@ -38,7 +39,7 @@
                                         </div>
                                     {% endfor%}
                                 {% else %} 
-                                    <h1>THERE ARE NO SONGS OF THIS GENRE</h1>
+                                    <h1>{% trans 'THERE ARE NO SONGS OF THIS GENRE' %}</h1>
                                 {% endif %}
                             {% endif %}
                         </div>

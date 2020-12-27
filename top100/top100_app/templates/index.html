@@ -1,13 +1,14 @@
 {% extends "base.html" %}
 {% load static %}
+{% load i18n %}
 
     {% block active%}
-    <li class="active"> <a href="{% url 'index' %}">Home</a> </li>
-    <li> <a href="{% url 'about' %}">About</a> </li>
-    <li> <a href="{% url 'author'%}"> Authors</a> </li>
-    <li><a href="{% url 'album' %}"> Albums</a> </li>
-    <li> <a href="{% url 'genre'%}">Genres</a> </li>
-    <li> <a href="{% url 'contact' %}">Contact</a> </li>
+    <li class="active"> <a href="{% url 'index' %}">{% trans 'Home' %}</a> </li>
+    <li> <a href="{% url 'about' %}">{% trans 'About' %}</a> </li>
+    <li> <a href="{% url 'author'%}">{% trans 'Authors' %}</a> </li>
+    <li><a href="{% url 'album' %}">{% trans 'Albums' %}</a> </li>
+    <li> <a href="{% url 'genre'%}">{% trans 'Genres' %}</a> </li>
+    <li> <a href="{% url 'contact' %}">{% trans 'Contact' %}</a> </li>
     {% endblock %}
 
     {% block body %}
@@ -16,7 +17,7 @@
 
     <div class="music-box">
         <div class="container">
-            <h1>Most listened songs</h1>
+            <h1>{% trans 'Most listened songs' %}</h1>
             <div class="row">
                 {% if genre_list %}
                     {% for item in topHitsByGenre %}
@@ -47,52 +48,28 @@
                 <div class="text-box">
                     <div class="box">
                         <i><img src="{% static 'images/5.png' %}" /></i>
-                        <h3>MEET OUR Music STARS</h3>
-                        <p>It is a long established fact that a reader will be distracted by the readable
-                            <br> content of a page when looking at its layout. The point of using Lorem </p>
-                        <a href="{% url 'author' %}">Read More</a>
+                        <h3>{% trans 'MEET OUR Music STARS' %}</h3>
+                        <p>{% trans 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem' %}</p>
+                        <a href="{% url 'author' %}">{% trans 'Read More' %}</a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
     <!-- end music-box  -->
-
-     <!--TEST 2
-        <div class="music-box">
-        <div class="container">
-            <div class="row">
-                {% if genre_list %}
-                    {% for g in genre_list %}
-                        <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
-                            <div class="for-box">
-                                <i><img src="{% static 'icon/icon1.png' %}" alt="icon"/></i>
-                                <h3>{{ g.name }}</h3>
-                                <p>Canciones más populares</p>
-                                <p>Hola</p>
-                            </wwdiv>
-                        </div>
-                    {% endfor %}
-                {% endif %}
-            </div>
-        </div>
-    </div>-->
-
-    
-
     <!-- Newsletter -->
     <div class="Newsletter">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
 
-                    <h2>Newsletter</h2>
+                    <h2>{% trans 'Newsletter' %}</h2>
                     <div class="row">
                         <div class="col-xl-9 col-lg-9 col-md-9 col-sm-9 padding-right">
                             <input class="email" placeholder="Enter Your Email" type="text" name="Enter Your Email">
                         </div>
                         <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 padding-left">
-                            <button class="submit-btn">Subscribe</button>
+                            <button class="submit-btn">{% trans 'Subscribe' %}</button>
                         </div>
                     </div>
                 </div>
@@ -101,5 +78,3 @@
     </div>
     <!-- end Newsletter -->
     {% endblock %}    
-   
-
