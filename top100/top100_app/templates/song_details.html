@@ -20,7 +20,7 @@
                     </div>
                     {% if song %}
                         <p>
-                            <h2>Author: {% for author in song.author.all %} {{author.name}} |{% endfor %}</h2>
+                            <h2>Author: {% for author in song.author.all %} {{author.name}} {% endfor %}</h2>
                             <h2>Genre: {{song.genre }} </h2>
                             <h2>Repros: {{song.repros}}</h2>
                             <h2>Album: {{song.album}}</h2>
