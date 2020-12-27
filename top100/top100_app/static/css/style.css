@@ -1546,9 +1546,11 @@
 }
 
  .Lastestnews .news-box figure img {
-     width: 380px;
-     height: 205px;
-     margin-left: 35px;
+     width: 340px;
+     height: 200px;
+     margin-left: 5px;
+     margin-top: 5px;
+     
 }
 
  .Lastestnews .news-box2 figure img {
@@ -1910,6 +1912,22 @@
      padding: 40px 0;
      font-weight: 500;
      text-align: center;
+}
+.blogbg p{
+    padding-bottom: 50px;
+    padding-left: 300px;
+}
+.blogbg img,h2{
+    padding-top: 5px;
+
+}
+.blogbg img{
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    left: 480px;
+    bottom: 50px;
+
 }
  .Albumsbg {
      background-color: #01b890;

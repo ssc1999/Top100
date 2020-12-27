@@ -18,17 +18,21 @@
                     <div class="blogtitlepage">
                         <h2>{{song.name}}</h2>
                     </div>
+                    {% if song %}
+                        <p>
+                            <h2>Author: {% for author in song.author.all %} {{author.name}} |{% endfor %}</h2>
+                            <h2>Genre: {{song.genre }} </h2>
+                            <h2>Repros: {{song.repros}}</h2>
+                            <h2>Album: {{song.album}}</h2>
+                            <img src="/{{ song.album.image.name }}" alt="{{ song.album.image.name }}"/>
+                        </p>
+                    {% endif %}
                 </div>
+                
             </div>
         </div>
     </div>
 
-    {% if song %}
-        <h3>{% for author in song.author.all %} {{author.name}} {% endfor %}</h3>
-        <h3>{{song.genre }} </h3>
-        <h3>Repros: {{song.repros}}</h3>
-        <h3>{{song.album}}</h3>
-        <img src="/{{ song.album.image.name }}" alt="{{ song.album.image.name }}"/>
-    {% endif %}
+    
 
     {% endblock%}
