@@ -21,10 +21,10 @@
                     </div>
                     {% if song %}
                         <p>
-                            <h2>{% trans 'Author: {% for author in song.author.all %} {{author.name}} {% endfor %}' %}</h2>
-                            <h2>{% trans 'Genre: {{song.genre }}' %}</h2>
-                            <h2>{% trans 'Repros: {{song.repros}}' %}</h2>
-                            <h2>{% trans 'Album: {{song.album}}' %}</h2>
+                            <h2>{% trans 'Author: ' %}{% for author in song.author.all %} {{author.name}} {% endfor %}</h2>
+                            <h2>{% trans 'Genre: ' %}{{song.genre }}</h2>
+                            <h2>{% trans 'Repros: ' %}{{song.repros}}</h2>
+                            <h2>{% trans 'Album: ' %}{{song.album}}</h2>
                             <img src="/{{ song.album.image.name }}" alt="{{ song.album.image.name }}"/>
                         </p>
                     {% endif %}

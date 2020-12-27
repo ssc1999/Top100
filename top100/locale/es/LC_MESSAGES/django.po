@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-12-27 21:17+0100\n"
+"POT-Creation-Date: 2020-12-27 21:59+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -98,8 +98,9 @@ msgid "THERE ARE NO AUTHORS"
 msgstr "NO HAY AUTORES"
 
 #: .\top100_app\templates\author_details.html:20
-msgid "Songs of {{author.name}}"
-msgstr "Canciones de {{author.name}}"
+#: .\top100_app\templates\genre_details.html:20
+msgid "Songs of"
+msgstr "Canciones de "
 
 #: .\top100_app\templates\author_details.html:40
 msgid "THERE ARE NO SONGS OF THIS AUTHOR"
@@ -153,10 +154,6 @@ msgstr "Modelos HTML gratis"
 msgid "THERE ARE NO GENRES"
 msgstr "NO HAY GÉNEROS"
 
-#: .\top100_app\templates\genre_details.html:20
-msgid "Songs of {{genre.name}}"
-msgstr "Canciones de {{genre.name}}"
-
 #: .\top100_app\templates\genre_details.html:42
 msgid "THERE ARE NO SONGS OF THIS GENRE"
 msgstr "NO HAY CANCIONES DE ESTE GÉNERO"
@@ -188,17 +185,27 @@ msgstr "Boletín"
 msgid "Subscribe"
 msgstr "Suscribirse"
 
+#: .\top100_app\templates\song_details.html:24
+#, fuzzy
+#| msgid "Authors"
+msgid "Author: "
+msgstr "Autor"
+
 #: .\top100_app\templates\song_details.html:25
-msgid "Genre: {{song.genre }}"
-msgstr "Género: {{song.genre}}"
+#, fuzzy
+#| msgid "Genres"
+msgid "Genre: "
+msgstr "Género"
 
 #: .\top100_app\templates\song_details.html:26
-msgid "Repros: {{song.repros}}"
-msgstr "Reproducciones: {{song.repros}}"
+msgid "Repros: "
+msgstr "Reproducciones: "
 
 #: .\top100_app\templates\song_details.html:27
-msgid "Album: {{song.album}}"
-msgstr "Álbum: {{song.album}}"
+#, fuzzy
+#| msgid "Albums"
+msgid "Album: "
+msgstr "Álbum"
 
 #: .\top100_syte\settings.py:114
 msgid "Español"
@@ -207,3 +214,18 @@ msgstr "Spanish"
 #: .\top100_syte\settings.py:115
 msgid "English"
 msgstr "Inglés"
+
+#~ msgid "Songs of {{author.name}}"
+#~ msgstr "Canciones de {{author.name}}"
+
+#~ msgid "Songs of {{genre.name}}"
+#~ msgstr "Canciones de {{genre.name}}"
+
+#~ msgid "Genre: {{song.genre }}"
+#~ msgstr "Género: {{song.genre}}"
+
+#~ msgid "Repros: {{song.repros}}"
+#~ msgstr "Reproducciones: {{song.repros}}"
+
+#~ msgid "Album: {{song.album}}"
+#~ msgstr "Álbum: {{song.album}}"
