@@ -1647,6 +1647,7 @@
 }
  .Albums .Albums-box figure img {
      width: 100%;
+     height: 500px;
 }
  .green {
      background-color: #6fb936;
