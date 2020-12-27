@@ -1,0 +1,108 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-12-27 18:11+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: .\top100_app\templates\index.html:6
+msgid "Home"
+msgstr "Inicio"
+
+#: .\top100_app\templates\index.html:7
+msgid "About"
+msgstr "Sobre"
+
+#: .\top100_app\templates\index.html:8
+msgid "Authors"
+msgstr "Autores"
+
+#: .\top100_app\templates\index.html:9
+msgid "Albums"
+msgstr "Albumes"
+
+#: .\top100_app\templates\index.html:10
+msgid "Genres"
+msgstr "Géneros"
+
+#: .\top100_app\templates\index.html:11
+msgid "Contact"
+msgstr "Contacto"
+
+#: .\top100_app\templates\index.html:71
+msgid "MEET OUR Music STARS"
+msgstr "Conoce a nuestras estrellas"
+
+#: .\top100_app\templates\index.html:72 .\top100_app\templates\index.html:87
+#: .\top100_app\templates\index.html:128
+msgid ""It is a long established fact that a reader will be distracted by the "
+"readable content of a page when looking at its layout. The point of using "
+"Lorem""
+msgstr "El lector se distrae al leer esto"
+
+#: .\top100_app\templates\index.html:73
+msgid "Read More"
+msgstr "Leer más"
+
+#: .\top100_app\templates\index.html:86
+msgid "Latest News"
+msgstr "Últimas noticias"
+
+#: .\top100_app\templates\index.html:95
+msgid "Live With Music"
+msgstr "Vive con la música"
+
+#: .\top100_app\templates\index.html:96 .\top100_app\templates\index.html:104
+#: .\top100_app\templates\index.html:112
+msgid "March 20"
+msgstr "20 de Marzo"
+
+#: .\top100_app\templates\index.html:96 .\top100_app\templates\index.html:104
+#: .\top100_app\templates\index.html:112
+msgid "Comment"
+msgstr "Comentar"
+
+#: .\top100_app\templates\index.html:97 .\top100_app\templates\index.html:105
+#: .\top100_app\templates\index.html:113
+msgid ""
+"It is a long established fact that a reader will be distracted by the "
+"readable content of a page when looking at its layout. The point of using "
+"Lorem Ipsum is that it has a more-or-less normal distribution of letters,"
+msgstr "El lector se distrae al leer esto"
+
+#: .\top100_app\templates\index.html:103 .\top100_app\templates\index.html:111
+msgid "Best Music"
+msgstr "Mejor Música"
+
+#: .\top100_app\templates\index.html:127
+msgid "Albums-box"
+msgstr "Caja de Albumes"
+
+#: .\top100_app\templates\index.html:169
+msgid "Newsletter"
+msgstr "Boletín informativo"
+
+#: .\top100_app\templates\index.html:175
+msgid "Subscribe"
+msgstr "Suscribirse"
+
+#: .\top100_syte\settings.py:113
+msgid "Español"
+msgstr "Spanish"
+
+#: .\top100_syte\settings.py:114
+msgid "English"
+msgstr "English"

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 {% load static %}
+{% load i18n %}
 
 <head>
     <!-- basic -->
@@ -61,6 +62,20 @@
                                     <ul class="menu-area-main">
                                         {% block active %}{% endblock %}
                                     </ul>
+                                    {% get_available_languages as LANGUAGES %}
+                                    {% get_language_info_list for LANGUAGES as languages %}
+                                    
+                                    <div class="fixed-action-btn">
+                                        <form action="{% url 'set_language' %}" method="POST" id="myform">
+                                        {% csrf_token %}
+                                        <p>Elige un idioma</p>
+                                        {% for language in languages %}
+                                                <button class="lang_button" type="submit" value="{{language.code}}" name="language">                                                 
+                                                    {{language.name}}
+                                                </button> 
+                                            {% endfor %}
+                                        </form>
+                                    </div>
                                 </nav>
                             </div>
                         </div>

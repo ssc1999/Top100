@@ -1,13 +1,14 @@
 {% extends "base.html" %}
 {% load static %}
+{% load i18n %}
 
     {% block active%}
-    <li class="active"> <a href="{% url 'index' %}">Home</a> </li>
-    <li> <a href="{% url 'about' %}">About</a> </li>
-    <li> <a href="{% url 'author'%}"> Authors</a> </li>
-    <li><a href="{% url 'album' %}"> Albums</a> </li>
-    <li> <a href="{% url 'genre'%}">Genres</a> </li>
-    <li> <a href="{% url 'contact' %}">Contact</a> </li>
+    <li class="active"> <a href="{% url 'index' %}">{% trans 'Home' %}</a> </li>
+    <li> <a href="{% url 'about' %}">{% trans 'About' %}</a> </li>
+    <li> <a href="{% url 'author'%}">{% trans 'Authors' %}</a> </li>
+    <li><a href="{% url 'album' %}">{% trans 'Albums' %}</a> </li>
+    <li> <a href="{% url 'genre'%}">{% trans 'Genres' %}</a> </li>
+    <li> <a href="{% url 'contact' %}">{% trans 'Contact' %}</a> </li>
     {% endblock %}
 
     {% block body %}
@@ -67,10 +68,9 @@
                 <div class="text-box">
                     <div class="box">
                         <i><img src="{% static 'images/5.png' %}" /></i>
-                        <h3>MEET OUR Music STARS</h3>
-                        <p>It is a long established fact that a reader will be distracted by the readable
-                            <br> content of a page when looking at its layout. The point of using Lorem </p>
-                        <a href="#">Read More</a>
+                        <h3>{% trans 'MEET OUR Music STARS' %}</h3>
+                        <p>{% trans 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem' %}</p>
+                        <a href="#">{% trans 'Read More' %}</a>
                     </div>
                 </div>
             </div>
@@ -83,8 +83,8 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="titlepage">
-                        <h2>Latest News</h2>
-                        <span>It is a long established fact that a reader will be distracted by the readable <br>content of a page when looking at its layout. The point of using Lorem </span>
+                        <h2>{% trans 'Latest News' %}</h2>
+                        <span>{% trans 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem' %}</span>
                     </div>
                 </div>
             </div>
@@ -92,25 +92,25 @@
                 <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
                     <div class="news-box">
                         <figure><img src="{% static 'images/1.jpg' %}" alt="img" /></figure>
-                        <h3>Live With Music</h3>
-                        <span> March 20</span><span>Comment</span>
-                        <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, </p>
+                        <h3>{% trans 'Live With Music' %}</h3>
+                        <span>{% trans 'March 20' %}</span><span>{% trans 'Comment' %}</span>
+                        <p>{% trans 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters,' %}</p>
                     </div>
                 </div>
                 <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
                     <div class="news-box">
                         <figure><img src="{% static 'images/2.jpg' %}" alt="img" /></figure>
-                        <h3>Best Music</h3>
-                        <span> March 20</span><span>Comment</span>
-                        <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, </p>
+                        <h3>{% trans 'Best Music' %}</h3>
+                        <span>{% trans 'March 20' %}</span><span>{% trans 'Comment' %}</span>
+                        <p>{% trans 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters,' %}</p>
                     </div>
                 </div>
                 <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
                     <div class="news-box">
                         <figure><img src="{% static 'images/3.jpg' %}" alt="img" /></figure>
-                        <h3>Live With Music</h3>
-                        <span> March 20</span><span>Comment</span>
-                        <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, </p>
+                        <h3>{% trans 'Best Music' %}</h3>
+                        <span>{% trans 'March 20' %}</span><span>{% trans 'Comment' %}</span>
+                        <p>{% trans 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters,' %}</p>
                     </div>
                 </div>
             </div>
@@ -124,8 +124,8 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="titlepage">
-                        <h2>Albums-box </h2>
-                        <span>It is a long established fact that a reader will be distracted by the readable <br>content of a page when looking at its layout. The point of using Lorem </span>
+                        <h2>{% trans 'Albums-box' %}</h2>
+                        <span>{% trans 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem' %}</span>
                     </div>
                 </div>
             </div>
@@ -166,13 +166,13 @@
             <div class="row">
                 <div class="col-md-12">
 
-                    <h2>Newsletter</h2>
+                    <h2>{% trans 'Newsletter' %}</h2>
                     <div class="row">
                         <div class="col-xl-9 col-lg-9 col-md-9 col-sm-9 padding-right">
                             <input class="email" placeholder="Enter Your Email" type="text" name="Enter Your Email">
                         </div>
                         <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 padding-left">
-                            <button class="submit-btn">Subscribe</button>
+                            <button class="submit-btn">{% trans 'Subscribe' %}</button>
                         </div>
                     </div>
                 </div>
