@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-12-27 18:11+0100\n"
+"POT-Creation-Date: 2020-12-27 18:35+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,6 +17,10 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: .\top100_app\templates\base.html:71
+msgid "Choose a language"
+msgstr "Elige un idioma"
 
 #: .\top100_app\templates\index.html:6
 msgid "Home"
@@ -48,10 +52,11 @@ msgstr "Conoce a nuestras estrellas"
 
 #: .\top100_app\templates\index.html:72 .\top100_app\templates\index.html:87
 #: .\top100_app\templates\index.html:128
-msgid ""It is a long established fact that a reader will be distracted by the "
+msgid ""
+"It is a long established fact that a reader will be distracted by the "
 "readable content of a page when looking at its layout. The point of using "
-"Lorem""
-msgstr "El lector se distrae al leer esto"
+"Lorem"
+msgstr "El lector se distrae"
 
 #: .\top100_app\templates\index.html:73
 msgid "Read More"
@@ -61,9 +66,10 @@ msgstr "Leer más"
 msgid "Latest News"
 msgstr "Últimas noticias"
 
-#: .\top100_app\templates\index.html:95
+#: .\top100_app\templates\index.html:95 .\top100_app\templates\index.html:103
+#: .\top100_app\templates\index.html:111
 msgid "Live With Music"
-msgstr "Vive con la música"
+msgstr "Vive con música"
 
 #: .\top100_app\templates\index.html:96 .\top100_app\templates\index.html:104
 #: .\top100_app\templates\index.html:112
@@ -81,19 +87,15 @@ msgid ""
 "It is a long established fact that a reader will be distracted by the "
 "readable content of a page when looking at its layout. The point of using "
 "Lorem Ipsum is that it has a more-or-less normal distribution of letters,"
-msgstr "El lector se distrae al leer esto"
-
-#: .\top100_app\templates\index.html:103 .\top100_app\templates\index.html:111
-msgid "Best Music"
-msgstr "Mejor Música"
+msgstr "El lector se distrae"
 
 #: .\top100_app\templates\index.html:127
 msgid "Albums-box"
-msgstr "Caja de Albumes"
+msgstr "Archivo de albumes"
 
 #: .\top100_app\templates\index.html:169
 msgid "Newsletter"
-msgstr "Boletín informativo"
+msgstr "Boletín"
 
 #: .\top100_app\templates\index.html:175
 msgid "Subscribe"
@@ -105,4 +107,4 @@ msgstr "Spanish"
 
 #: .\top100_syte\settings.py:114
 msgid "English"
-msgstr "English"
+msgstr "Inglés"

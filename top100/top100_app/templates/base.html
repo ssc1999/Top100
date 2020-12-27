@@ -68,7 +68,7 @@
                                     <div class="fixed-action-btn">
                                         <form action="{% url 'set_language' %}" method="POST" id="myform">
                                         {% csrf_token %}
-                                        <p>Elige un idioma</p>
+                                        <p>{% trans 'Choose a language' %}</p>
                                         {% for language in languages %}
                                                 <button class="lang_button" type="submit" value="{{language.code}}" name="language">                                                 
                                                     {{language.name}}
